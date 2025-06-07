@@ -16,7 +16,7 @@ const Highlights = () => {
                 duration: 1,
                 stagger: 0.25
 
-        })
+            })
     })
     return (
         <section id="highlights" className='w-full overflow-hidden h-full common-padding bg-zinc'>
