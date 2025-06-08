@@ -4,6 +4,8 @@ import Hero from "./components/Hero.jsx";
 import HighLights from "./components/HighLights.jsx";
 import Model from "./components/Model.jsx";
 import Features from "./components/Features.jsx";
+import HowItWorks from "./components/HowItWorks.jsx";
+import Footer from "./components/Footer.jsx";
 const App = () => {
     return (
         <main>
@@ -12,6 +14,8 @@ const App = () => {
             <HighLights/>
             <Model/>
             <Features/>
+            <HowItWorks/>
+            <Footer/>
         </main>
     )
 }
