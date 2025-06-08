@@ -59,8 +59,8 @@ const Features = () => {
                                 </div>
                             </div>
                             <div className='feature-text-container'>
-                                <div className='flex-1 flex-center'>
-                                    <div className='feature-text g_text'>
+                                <div className='flex-1 flex-col lg:flex-row flex-center '>
+                                    <div className='feature-text mb-5 g_text'>
                                         <p>
                                             iPhone 15 Pro is {' '}
                                             <span className='text-white'>
