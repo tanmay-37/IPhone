@@ -23,6 +23,35 @@ const HowItWorks = () => {
             ease:'power2.inOut'
         })
 
+        // Video play control with ScrollTrigger
+        ScrollTrigger.create({
+            trigger: '.hiw-video',
+            start: 'top bottom',
+            end: 'bottom top',
+            onEnter: () => {
+                if (videoRef.current) {
+                    videoRef.current.currentTime = 0; // Reset to beginning
+                    videoRef.current.play();
+                }
+            },
+            onLeave: () => {
+                if (videoRef.current) {
+                    videoRef.current.pause();
+                }
+            },
+            onEnterBack: () => {
+                if (videoRef.current) {
+                    videoRef.current.currentTime = 0; // Reset to beginning
+                    videoRef.current.play();
+                }
+            },
+            onLeaveBack: () => {
+                if (videoRef.current) {
+                    videoRef.current.pause();
+                }
+            }
+        });
+
         animateWithGsap('.g_fadeIn', {
             opacity: 1,
             y: 0,
@@ -59,7 +88,7 @@ const HowItWorks = () => {
                             />
                         </div>
                         <div className="hiw-video">
-                            <video className="pointer-events-none" playsInline preload="none" muted autoPlay ref={videoRef}>
+                            <video className="pointer-events-none" playsInline preload="none" muted ref={videoRef}>
                                 <source src={frameVideo} type="video/mp4" />
                             </video>
                         </div>
